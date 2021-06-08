@@ -20,18 +20,18 @@ def evaluate(event):             #function to evaluate the user input
         res.configure(error())
 
 from tkinter import *  
-titan=Tk()
-titan.title("Titan spy")             #Title of our GUI
-titan.minsize(300,300)
-w=Label(titan,text="solve this, 3+3=?")
+top=Tk()
+top.title("Titan spy")             #Title of our GUI
+top.minsize(300,300)
+w=Label(top,text="solve this, 3+3=?")
 w.pack()
-e=Entry(titan)
+e=Entry(top)
 e.bind('<Return>',evaluate)             #If user press the enter key then also user will get the output
 e.pack()
-b=Button(titan,text="click")            #Button for user to click and check the answer
+b=Button(top,text="click")            #Button for user to click and check the answer
 b.bind('<Button-1>',evaluate)
 b.pack()
-res=Label(titan)
+res=Label(top)
 res.pack()
-titan.mainloop()
+top.mainloop()
 
